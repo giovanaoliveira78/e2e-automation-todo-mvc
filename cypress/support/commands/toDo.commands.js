@@ -26,3 +26,26 @@ Cypress.Commands.add('completeItems', () => {
     .first()
     .click()
 })
+
+Cypress.Commands.add('filterAll', () => {
+  cy.get(ELEMENTS.filterAll)
+    .click()
+})
+
+Cypress.Commands.add('filterActive', () => {
+  cy.get(ELEMENTS.filterActive)
+    .and('be.visible')
+    .click()
+})
+
+Cypress.Commands.add('filterCompleted', () => {
+  cy.get(ELEMENTS.filterCompleted)
+    .and('be.visible')
+    .click()
+})
+
+Cypress.Commands.add('filterClear', () => {
+  cy.get(ELEMENTS.filterClear)
+    .and('be.visible')
+    .click()
+})
