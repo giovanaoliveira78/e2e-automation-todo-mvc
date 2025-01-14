@@ -1,1 +1,1 @@
-## e2e automation - todo-mvc
+## e2e - todoMVC
