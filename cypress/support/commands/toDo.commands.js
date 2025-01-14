@@ -49,3 +49,10 @@ Cypress.Commands.add('filterClear', () => {
     .and('be.visible')
     .click()
 })
+
+Cypress.Commands.add('deleteItem', () => {
+  cy.get(ELEMENTS.deleteButton)
+    .first()
+    .invoke('show')
+    .click()
+})
