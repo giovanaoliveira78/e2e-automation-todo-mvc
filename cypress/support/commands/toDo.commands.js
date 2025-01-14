@@ -23,6 +23,6 @@ Cypress.Commands.add('addAllItemsToList', () => {
 
 Cypress.Commands.add('completeItems', () => {
   cy.get(ELEMENTS.completeButton)
-    .eq(1)
+    .first()
     .click()
 })
