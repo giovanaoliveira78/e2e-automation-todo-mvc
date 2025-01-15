@@ -1,6 +1,12 @@
 import { ELEMENTS } from '../elements/toDo.elements'
 import { getRandomItem } from '../utils'
 
+Cypress.Commands.add('validatesHomeScreen', () => {
+  cy.get(ELEMENTS.todoInputWhatNeedsToBeDone)
+    .should('have.attr', 'placeholder')
+    .and('include', 'What needs to be done?')
+})
+
 Cypress.Commands.add('addItemToList', () => {
   const randomItem = getRandomItem();
   cy.get(ELEMENTS.inputToDo)
@@ -45,9 +51,9 @@ Cypress.Commands.add('filterCompleted', () => {
 })
 
 Cypress.Commands.add('filterClear', () => {
-  cy.get(ELEMENTS.filterClear)
-    .and('be.visible')
-    .click()
+  cy.get(ELEMENTS.clearCompletedButton)
+    .trigger('mouseover')
+    .click({force: true})
 })
 
 Cypress.Commands.add('deleteItem', () => {

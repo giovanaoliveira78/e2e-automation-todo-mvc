@@ -4,6 +4,7 @@ export const ELEMENTS = {
   filterAll: 'ul[class="filters"] li a[href="#/"]',
   filterActive: 'ul[class="filters"] li a[href="#/active"]',
   filterCompleted: 'ul[class="filters"] li a[href="#/completed"]',
-  clearCompletedButton: 'ul[class="filters"] li a',
-  deleteButton: 'div[class="view"] button'
+  clearCompletedButton: 'footer[class="footer"] button',
+  deleteButton: 'div[class="view"] button',
+  todoInputWhatNeedsToBeDone: 'input[id="todo-input"]',
 }
