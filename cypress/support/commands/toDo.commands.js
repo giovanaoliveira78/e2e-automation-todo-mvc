@@ -62,3 +62,8 @@ Cypress.Commands.add('deleteItem', () => {
     .invoke('show')
     .click()
 })
+
+Cypress.Commands.add('counter', () => {
+  cy.get(ELEMENTS.counter)
+    .contains('7 items left!')
+})

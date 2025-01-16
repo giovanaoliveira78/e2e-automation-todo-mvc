@@ -52,4 +52,11 @@ describe('Regression Tests - ToDo MVC', () => {
       cy.deleteItem();
     })
   })
+
+  context('Validate the counter', () => {
+    it('Should validate the counter', () => {
+      cy.addAllItemsToList();
+      cy.counter();
+    })
+  })
 })

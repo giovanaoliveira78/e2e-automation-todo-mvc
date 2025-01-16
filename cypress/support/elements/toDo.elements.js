@@ -7,4 +7,5 @@ export const ELEMENTS = {
   clearCompletedButton: 'footer[class="footer"] button',
   deleteButton: 'div[class="view"] button',
   todoInputWhatNeedsToBeDone: 'input[id="todo-input"]',
+  counter: 'span[class="todo-count"]'
 }
