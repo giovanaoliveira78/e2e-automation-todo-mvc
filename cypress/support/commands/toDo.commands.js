@@ -52,8 +52,8 @@ Cypress.Commands.add('filterCompleted', () => {
 
 Cypress.Commands.add('filterClear', () => {
   cy.get(ELEMENTS.clearCompletedButton)
-    .trigger('mouseover')
-    .click({force: true})
+    .and('be.visible')
+    .click()
 })
 
 Cypress.Commands.add('deleteItem', () => {
