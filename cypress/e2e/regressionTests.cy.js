@@ -29,14 +29,17 @@ describe('Regression Tests - ToDo MVC', () => {
     })
     it('Should filter all items', () => {
       cy.filterAll();
+      cy.arraySize(7);
     })
 
     it('Should filter all active items', () => {
       cy.filterActive();
+      cy.arraySize(6);
     })
 
     it('Should filter the completed items', () => {
       cy.filterCompleted();
+      cy.arraySize(1);
     })
 
     it('Should clear all items', () => {
@@ -50,6 +53,7 @@ describe('Regression Tests - ToDo MVC', () => {
     })
     it('Should delete items from the list', () => {
       cy.deleteItem();
+      cy.arraySize(6);
     })
   })
 

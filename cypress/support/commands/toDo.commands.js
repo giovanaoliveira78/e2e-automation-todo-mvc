@@ -67,3 +67,9 @@ Cypress.Commands.add('counter', () => {
   cy.get(ELEMENTS.counter)
     .contains('7 items left!')
 })
+
+Cypress.Commands.add('arraySize', (expectedCount) => {
+  cy.get(ELEMENTS.listSize)
+    .find('li')
+    .should('have.length', expectedCount);
+})
